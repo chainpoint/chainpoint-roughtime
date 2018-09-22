@@ -1,4 +1,4 @@
-# chainpoint-roughenough
+# chainpoint-roughtime
 
 An experimental Dockerfile to create a [Roughtime](https://roughtime.googlesource.com/roughtime) server image using the [int08h/roughenough](https://github.com/int08h/roughenough) Rust implementation of the Roughtime client and server.
 
@@ -66,7 +66,7 @@ Received time from server: midpoint="Sep 22 2018 20:31:43", radius=1000000 (merk
 roughtime.int08h.com
 
 ```
-❯ docker run -it chainpoint-roughenough:latest /roughenough/target/release/client roughtime.int08h.com 2002 -p 016e6e0284d24c37c6e4d7d8d5b4e1d3c1949ceaa545bf875616c9dce0c9bec1
+$ docker run -it chainpoint-roughenough:latest /roughenough/target/release/client roughtime.int08h.com 2002 -p 016e6e0284d24c37c6e4d7d8d5b4e1d3c1949ceaa545bf875616c9dce0c9bec1
 
 Requesting time from: "roughtime.int08h.com":2002
 Received time from server: midpoint="Sep 22 2018 20:20:57", radius=1000000 (merkle_index=0, verified=true)
