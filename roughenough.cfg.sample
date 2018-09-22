@@ -1,0 +1,4 @@
+port: 2002
+interface: 127.0.0.1
+seed: 32-BYTE-HEX-SECRET-REPLACE-ME
+batch_size: 64
