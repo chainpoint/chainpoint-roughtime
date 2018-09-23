@@ -1,11 +1,11 @@
 version: '2.1'
 
 services:
-  chainpoint-roughenough:
+  chainpoint-roughtime:
     build: .
-    image: chainpoint-roughenough:latest
-    container_name: chainpoint-roughenough
-    hostname: roughenough
+    image: gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest
+    container_name: chainpoint-roughtime
+    hostname: roughtime
     restart: on-failure:2
     volumes:
       - ./roughenough.cfg:/roughenough/roughenough.cfg:ro
