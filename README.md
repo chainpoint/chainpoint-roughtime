@@ -49,25 +49,29 @@ You might find additional, or updated, Roughtime hosts in the [ecosystem](https:
 roughtime.cloudflare.com
 
 ```
-$ docker run -it chainpoint-roughenough:latest /roughenough/target/release/client roughtime.cloudflare.com 2002 -p 803eb78528f749c4bec2e39e1abb9b5e5ab7e4dd5ce4b6f2fd2f93ecc3538f1a
+$ docker run -it chainpoint-roughenough:latest /roughenough/target/release/c
+lient roughtime.cloudflare.com 2002 -p 803eb78528f749c4bec2e39e1abb9b5e5ab7e4dd5ce4b6f2fd2f93ecc3538f1a
 
 Requesting time from: "roughtime.cloudflare.com":2002
-Received time from server: midpoint="Sep 22 2018 20:19:01", radius=1000000 (merkle_index=0, verified=true)
+Received time from server: midpoint="Sep 23 2018 00:36:19", radius=1000000 (merkle_index=0, verified=true)
 ```
 
 roughtime.sandbox.google.com
 
 ```
-$ docker run -it chainpoint-roughtime:latest /roughtime/roughenough/target/release/client roughtime.sandbox.google.com 2002 -p 7ad3da688c5c04c635a14786a70bcf30224cc25455371bf9d4a2bfb64b682534
+$ docker run -it chainpoint-roughenough:latest /roughenough/target/release/c
+lient roughtime.sandbox.google.com 2002 -p 7ad3da688c5c04c635a14786a70bcf30224cc25455371bf9d4a2bfb64b682534
+
 Requesting time from: "roughtime.sandbox.google.com":2002
-Received time from server: midpoint="Sep 22 2018 20:31:43", radius=1000000 (merkle_index=0, verified=true)
+Received time from server: midpoint="Sep 23 2018 00:35:40", radius=1000000 (merkle_index=0, verified=true)
 ```
 
 roughtime.int08h.com
 
 ```
-$ docker run -it chainpoint-roughenough:latest /roughenough/target/release/client roughtime.int08h.com 2002 -p 016e6e0284d24c37c6e4d7d8d5b4e1d3c1949ceaa545bf875616c9dce0c9bec1
+$ docker run -it chainpoint-roughenough:latest /roughenough/target/release/c
+lient roughtime.int08h.com 2002 -p 016e6e0284d24c37c6e4d7d8d5b4e1d3c1949ceaa545bf875616c9dce0c9bec1
 
 Requesting time from: "roughtime.int08h.com":2002
-Received time from server: midpoint="Sep 22 2018 20:20:57", radius=1000000 (merkle_index=0, verified=true)
+Received time from server: midpoint="Sep 23 2018 00:37:01", radius=1000000 (merkle_index=0, verified=true)
 ```
