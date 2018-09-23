@@ -28,16 +28,17 @@ In another terminal Identify the `Container ID` (`923c0ad8f67d` in this example)
 
 ```
 $ docker ps
-CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS              PORTS                    NAMES
-923c0ad8f67d        chainpoint-roughenough:latest   "gosu roughenough:ro…"   34 minutes ago      Up About a minute   0.0.0.0:2002->2002/udp   chainpoint-roughenough
+CONTAINER ID        IMAGE                                                                      COMMAND                  CREATED             STATUS              PORTS                    NAMES
+33ad742cac21        gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest   "gosu roughenough:ro…"   37 minutes ago      Up 2 seconds        0.0.0.0:2002->2002/udp   chainpoint-roughtime
 ```
 
-Run the client against the local server (you'll need to provide your server's Container ID `-t` and unique public key with the `-p` flag. The values provided in this example won't work for you.)
+Run the client against the local server (you'll need to provide your server's Container ID `-t`. The ID provided in this example won't work for you.)
 
 ```
-$ docker exec -i -t 923c0ad8f67d /roughenough/target/release/client 127.0.0.1 2002 -p d0756ee69ff5fe96cbcf9273208fec53124b1dd3a24d3910e07c7c54e2473012
+$ docker exec -it 33ad742cac21 /roughenough/target/release/client 127.0.0.1 2002
+
 Requesting time from: "127.0.0.1":2002
-Received time from server: midpoint="Sep 22 2018 20:26:57", radius=1000000 (merkle_index=0, verified=true)
+Received time from server: midpoint="Sep 23 2018 05:26:57", radius=1000000 (merkle_index=0, verified=false)
 ```
 
 ## Run a `roughenough` Client
