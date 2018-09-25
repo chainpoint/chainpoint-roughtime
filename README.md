@@ -45,7 +45,7 @@ Received time from server: midpoint="Sep 23 2018 05:26:57", radius=1000000 (merk
 
 This image also includes the Roughenough client. You can use it to retrieve and verify a timestamp from any Roughtime server. Here are some examples with their proper DNS names and public keys provided.
 
-You might find additional, or updated, Roughtime hosts in the [ecosystem](https://github.com/cloudflare/roughtime/blob/master/ecosystem.config).
+You can find a description of additional Roughtime hosts in the [ecosystem.md](https://github.com/cloudflare/roughtime/blob/master/ecosystem.md) file and a JSON representation of the list in [ecosystem.json](https://github.com/cloudflare/roughtime/blob/master/ecosystem.json).
 
 Examples of using the client can be found below.
 
