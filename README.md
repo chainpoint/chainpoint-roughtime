@@ -83,7 +83,7 @@ roughtime.chainpoint.org. 300	IN	TXT	"6db4fe44f4bbcca5fac3bd6cb0f89bce6c16a94f5f
 A timestamp can be retrieved with:
 
 ```
-$ docker run -it gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client roughtime.chainpoint.org 2002 -p 6db4fe44f4bbcca5fac3bd6cb0f89bce6c16a94f5f7d1579a23d8eadeb129a11
+$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client roughtime.chainpoint.org 2002 -p 6db4fe44f4bbcca5fac3bd6cb0f89bce6c16a94f5f7d1579a23d8eadeb129a11
 
 Requesting time from: "roughtime.chainpoint.org":2002
 Received time from server: midpoint="Sep 23 2018 04:47:46", radius=1000000 (merkle_index=0, verified=true)
@@ -94,7 +94,7 @@ Received time from server: midpoint="Sep 23 2018 04:47:46", radius=1000000 (merk
 ### roughtime.cloudflare.com
 
 ```
-$ docker run -it gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client roughtime.cloudflare.com 2002 -p 803eb78528f749c4bec2e39e1abb9b5e5ab7e4dd5ce4b6f2fd2f93ecc3538f1a
+$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client roughtime.cloudflare.com 2002 -p 803eb78528f749c4bec2e39e1abb9b5e5ab7e4dd5ce4b6f2fd2f93ecc3538f1a
 
 Requesting time from: "roughtime.cloudflare.com":2002
 Received time from server: midpoint="Sep 23 2018 04:48:59", radius=1000000 (merkle_index=0, verified=true)
@@ -103,7 +103,7 @@ Received time from server: midpoint="Sep 23 2018 04:48:59", radius=1000000 (merk
 ### roughtime.sandbox.google.com
 
 ```
-$ docker run -it gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client roughtime.sandbox.google.com 2002 -p 7ad3da688c5c04c635a14786a70bcf30224cc25455371bf9d4a2bfb64b682534
+$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client roughtime.sandbox.google.com 2002 -p 7ad3da688c5c04c635a14786a70bcf30224cc25455371bf9d4a2bfb64b682534
 
 Requesting time from: "roughtime.sandbox.google.com":2002
 Received time from server: midpoint="Sep 23 2018 04:50:10", radius=1000000 (merkle_index=0, verified=true)
@@ -112,7 +112,7 @@ Received time from server: midpoint="Sep 23 2018 04:50:10", radius=1000000 (merk
 ### roughtime.int08h.com
 
 ```
-$ docker run -it gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client roughtime.int08h.com 2002 -p 016e6e0284d24c37c6e4d7d8d5b4e1d3c1949ceaa545bf875616c9dce0c9bec1
+$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client roughtime.int08h.com 2002 -p 016e6e0284d24c37c6e4d7d8d5b4e1d3c1949ceaa545bf875616c9dce0c9bec1
 
 Requesting time from: "roughtime.int08h.com":2002
 Received time from server: midpoint="Sep 23 2018 04:50:53", radius=1000000 (merkle_index=0, verified=true)
