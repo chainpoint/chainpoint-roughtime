@@ -35,7 +35,7 @@ CONTAINER ID        IMAGE                                                       
 Run the client against the local server (you'll need to provide your server's unique `Container ID` not the one shown here)
 
 ```
-$ docker exec -it 33ad742cac21 /roughenough/target/release/client 127.0.0.1 2002
+$ docker exec -it 33ad742cac21 roughenough-client 127.0.0.1 2002
 
 Requesting time from: "127.0.0.1":2002
 Received time from server: midpoint="Sep 23 2018 05:26:57", radius=1000000 (merkle_index=0, verified=false)
@@ -76,10 +76,10 @@ roughtime.chainpoint.org. 300	IN	TXT	"6db4fe44f4bbcca5fac3bd6cb0f89bce6c16a94f5f
 ...
 ```
 
-A timestamp can be retrieved using a pre-built client hosted in a public Docker image:
+A timestamp can be retrieved using the pre-built client from our public Docker image:
 
 ```
-$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client roughtime.chainpoint.org 2002 -p 6db4fe44f4bbcca5fac3bd6cb0f89bce6c16a94f5f7d1579a23d8eadeb129a11
+$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest roughenough-client roughtime.chainpoint.org 2002 -p 6db4fe44f4bbcca5fac3bd6cb0f89bce6c16a94f5f7d1579a23d8eadeb129a11
 
 Requesting time from: "roughtime.chainpoint.org":2002
 Received time from server: midpoint="Sep 23 2018 04:47:46", radius=1000000 (merkle_index=0, verified=true)
@@ -90,23 +90,23 @@ Received time from server: midpoint="Sep 23 2018 04:47:46", radius=1000000 (merk
 You can use the client in this docker image to get a timestamp from any of them using the following command, substituting the `HOST` and `PUBLIC-KEY`:
 
 ```
-$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client <HOST> 2002 -p <PUBLIC-KEY>
+$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest roughenough-client <HOST> 2002 -p <PUBLIC-KEY>
 ```
 
 #### roughtime.cloudflare.com
 
 ```
-$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client roughtime.cloudflare.com 2002 -p 803eb78528f749c4bec2e39e1abb9b5e5ab7e4dd5ce4b6f2fd2f93ecc3538f1a
+$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest roughenough-client roughtime.cloudflare.com 2002 -p 803eb78528f749c4bec2e39e1abb9b5e5ab7e4dd5ce4b6f2fd2f93ecc3538f1a
 ```
 
 #### roughtime.sandbox.google.com
 
 ```
-$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client roughtime.sandbox.google.com 2002 -p 7ad3da688c5c04c635a14786a70bcf30224cc25455371bf9d4a2bfb64b682534
+$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest roughenough-client roughtime.sandbox.google.com 2002 -p 7ad3da688c5c04c635a14786a70bcf30224cc25455371bf9d4a2bfb64b682534
 ```
 
 #### roughtime.int08h.com
 
 ```
-$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest /roughenough/target/release/client roughtime.int08h.com 2002 -p 016e6e0284d24c37c6e4d7d8d5b4e1d3c1949ceaa545bf875616c9dce0c9bec1
+$ docker run -it --rm gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest roughenough-client roughtime.int08h.com 2002 -p 016e6e0284d24c37c6e4d7d8d5b4e1d3c1949ceaa545bf875616c9dce0c9bec1
 ```

@@ -3,7 +3,7 @@ version: '2.1'
 services:
   chainpoint-roughtime:
     build: .
-    image: gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:0e5eb8f388fa4622e325028217d8e57a472b2dcc
+    image: gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest
     container_name: chainpoint-roughtime
     hostname: roughtime
     restart: on-failure:2
