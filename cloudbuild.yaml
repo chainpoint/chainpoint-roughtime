@@ -1,0 +1,10 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:$COMMIT_SHA', '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest', '.' ]
+images:
+- 'gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:$COMMIT_SHA'
+- 'gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest'
+tags:
+- "cloudbuild"
