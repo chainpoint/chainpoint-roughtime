@@ -18,10 +18,7 @@ FROM rust:1.29.1-stretch AS build-env
 # Tini : https://github.com/krallin/tini
 ENV TINI_VERSION v0.18.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini.asc /tini.asc
-RUN gpg --no-tty --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7 && \
-    gpg --verify /tini.asc && \
-    chown root:root /tini && \
+RUN chown root:root /tini && \
     chmod 755 /tini
 
 # Checkout the specific release tag of Roughenough
