@@ -49,6 +49,12 @@ You can find a description of additional Roughtime hosts in the [ecosystem.md](h
 
 ## Roughtime Servers
 
+You are advised to run the latest version of the Docker image. You can ensure you have the latest by running:
+
+```
+docker pull gcr.io/chainpoint-registry/github-chainpoint-chainpoint-roughtime:latest
+```
+
 ### roughtime.chainpoint.org
 
 The `chainpoint.org` roughtime servers run on the Google Compute Platform behind a `UDP` load balancer and rely on Google's internal leap-smeared `NTP` time service for accuracy.
