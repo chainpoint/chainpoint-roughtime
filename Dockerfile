@@ -9,7 +9,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM rust:1.29.0-stretch
+FROM rust:1.29.1-stretch
 
 LABEL MAINTAINER="Glenn Rempe <glenn@tierion.com>"
 
@@ -34,8 +34,8 @@ RUN git clone https://github.com/int08h/roughenough.git
 WORKDIR /roughenough
 
 # PIN Versions:
-# 1.0.4 : 363943e525d8f3448b769e92be0c0afa25e3cfbc
-RUN git reset --hard 363943e525d8f3448b769e92be0c0afa25e3cfbc
+# 1.0.5 : 7875dda06327f771cd67eb135b381e6d87c228de
+RUN git reset --hard 7875dda06327f771cd67eb135b381e6d87c228de
 
 RUN cargo build --release
 
