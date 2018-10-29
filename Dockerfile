@@ -22,12 +22,14 @@ RUN chown root:root /tini && \
     chmod 755 /tini
 
 # Checkout the specific release tag of Roughenough
-ENV ROUGHENOUGH_VERSION 1.0.6
+# and compile with Google Cloud KMS support
+# See : https://github.com/int08h/roughenough/blob/master/doc/OPTIONAL-FEATURES.md
+ENV ROUGHENOUGH_VERSION 1.1.1
 RUN git clone https://github.com/int08h/roughenough.git && \
     cd /roughenough && \
     git fetch --all --tags --prune && \
     git checkout tags/${ROUGHENOUGH_VERSION} -b ${ROUGHENOUGH_VERSION} && \
-    cargo build --release
+    cargo build --release --features "gcpkms"
 
 ##
 ## SECOND STAGE : PACKAGE BINARIES WITHOUT COMPILER TOOLS
@@ -38,9 +40,10 @@ FROM debian:9.5-slim
 LABEL MAINTAINER="Glenn Rempe <glenn@tierion.com>"
 
 # Install gosu : https://github.com/tianon/gosu
-# and create roughenough user
+# and create 'roughenough' user. Install 'libssl-dev'
+# for Google KMS support.
 RUN apt-get update && \
-    apt-get install -y gosu && \
+    apt-get install -y gosu libssl-dev && \
     useradd -ms /bin/bash roughenough
 
 # Copy only binaries from build image to this dist image
@@ -50,7 +53,7 @@ COPY --from=build-env /roughenough/target/release/roughenough-client /usr/local/
 
 WORKDIR /roughenough
 
-EXPOSE 2002/udp
+EXPOSE 2002/udp 8000/tcp
 
 ENTRYPOINT ["gosu", "roughenough:roughenough", "/tini", "--"]
 

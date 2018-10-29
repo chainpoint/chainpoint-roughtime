@@ -11,3 +11,4 @@ services:
       - ./roughenough.cfg:/roughenough/roughenough.cfg:ro
     ports:
       - "2002:2002/udp"
+      - "8000:8000"
